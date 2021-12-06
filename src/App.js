@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Table from "./components/Table.js";
+import { useState } from "react";
+import { ButtonGroup, ToggleButton } from "react-bootstrap";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [riders, setRider] = useState([
+    {
+      id: 1,
+      name: "Frans",
+      indoor: false,
+      outdoor: false,
+      wood: false,
+    },
+    {
+      id: 2,
+      name: "Ida",
+      indoor: false,
+      outdoor: false,
+      wood: false,
+    },
+    {
+      id: 3,
+      name: "Jens Peter",
+      indoor: false,
+      outdoor: false,
+      wood: false,
+    },
+  ]);
+
+  // const buttonClicked = (id) => {
+  //   console.log("clicked", id);
+  // };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>RytterApp</h1>
+      <Table className="table" riders={riders} />
     </div>
   );
-}
+};
 
 export default App;
