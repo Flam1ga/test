@@ -1,6 +1,7 @@
 import "./App.css";
 import Table from "./components/Table.js";
 import { useState } from "react";
+import { ButtonGroup, ToggleButton } from "react-bootstrap";
 import "./App.css";
 
 const App = () => {
